@@ -13,59 +13,124 @@ st.markdown(
     """
     <style>
     .main {
-        background: linear-gradient(135deg, #071b2f 0%, #0d233d 30%, #101d2d 100%);
+        background: linear-gradient(135deg, #06141f 0%, #0b1d2d 20%, #0f172a 100%);
     }
     .block-container {
         padding-top: 2rem;
         padding-bottom: 3rem;
+        max-width: 1500px;
     }
     .hero {
-        background: linear-gradient(135deg, rgba(26, 88, 170, 0.2), rgba(13, 35, 61, 0.8));
-        border: 1px solid rgba(115, 147, 175, 0.28);
-        border-radius: 22px;
-        padding: 1.25rem 1.5rem;
+        background: linear-gradient(135deg, rgba(56, 189, 248, 0.12), rgba(15, 23, 42, 0.9));
+        border: 1px solid rgba(148, 163, 184, 0.22);
+        border-radius: 24px;
+        padding: 1.5rem 1.75rem;
         margin-bottom: 1.5rem;
+        box-shadow: 0 18px 50px rgba(15, 23, 42, 0.35);
     }
-    .title-label {
+    .brand-row {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 0.8rem;
+    }
+    .brand-mark {
+        width: 56px;
+        height: 56px;
+        border-radius: 16px;
+        background: linear-gradient(135deg, #38bdf8, #7c3aed);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 10px 25px rgba(56, 189, 248, 0.35);
+        flex-shrink: 0;
+    }
+    .brand-mark svg {
+        width: 30px;
+        height: 30px;
+    }
+    .eyebrow {
         letter-spacing: 0.12em;
         text-transform: uppercase;
-        font-size: 0.74rem;
-        color: #8ad4ff;
+        font-size: 0.72rem;
         font-weight: 700;
+        color: #7dd3fc;
     }
     .card {
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(138, 212, 255, 0.15);
-        border-radius: 16px;
-        padding: 1rem;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+        background: rgba(15, 23, 42, 0.8);
+        border: 1px solid rgba(148, 163, 184, 0.2);
+        border-radius: 18px;
+        padding: 1rem 1.1rem;
+        box-shadow: 0 10px 25px rgba(15, 23, 42, 0.22);
     }
-    .stButton > button {
-        border-radius: 10px;
+    .status-chip {
+        display: inline-block;
+        margin: 0.5rem 0.5rem 0 0;
+        padding: 0.28rem 0.62rem;
+        border-radius: 999px;
+        border: 1px solid rgba(125, 211, 252, 0.3);
+        background: rgba(14, 165, 233, 0.12);
+        color: #bae6fd;
+        font-size: 0.74rem;
         font-weight: 600;
-        background: linear-gradient(135deg, #4ab7ff, #7a7dff);
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+    }
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header[data-testid="stHeader"] {display: none;}
+    div[data-testid="stToolbar"] {display: none !important;}
+    div[data-testid="stDecoration"] {display: none !important;}
+    [data-testid="stStatusWidget"] {display: none;}
+    .stButton > button {
+        border-radius: 12px;
+        font-weight: 600;
+        background: linear-gradient(135deg, #38bdf8, #7c3aed);
         color: white;
         border: none;
+        padding: 0.75rem 1.2rem;
+    }
+    .stButton > button:hover {
+        filter: brightness(1.08);
     }
     .stDownloadButton > button {
-        border-radius: 10px;
+        border-radius: 12px;
         font-weight: 600;
-        background: linear-gradient(135deg, #148f70, #1bbd8e);
+        background: linear-gradient(135deg, #10b981, #0ea5e9);
         color: white;
         border: none;
+        padding: 0.75rem 1.2rem;
+    }
+    .sidebar .block-container {
+        padding-top: 1rem;
+    }
+    [data-testid=stSidebar] {
+        background: rgba(10, 18, 30, 0.95);
     }
     </style>
     """,
     unsafe_allow_html=True,
 )
 
-
 st.markdown(
     """
     <div class="hero">
-      <div class="title-label">Cybersecurity portfolio project</div>
-      <h1 style="margin: 0.2rem 0 0.6rem 0; color: #f2f7ff;">Phishing Email Detection & Awareness Dashboard</h1>
-      <div style="color: #c7d8ea; font-size: 1.02rem;">Defensive, explainable, and beginner-friendly phishing analysis with awareness education.</div>
+      <div class="brand-row">
+        <div class="brand-mark">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 2.5L18.5 5V10.5C18.5 15.4 15.6 19.8 12 21.5C8.4 19.8 5.5 15.4 5.5 10.5V5L12 2.5Z" stroke="white" stroke-width="1.8"/>
+            <path d="M9.5 11.8L11.2 13.5L14.8 9.9" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div>
+          <div class="eyebrow">Cybersecurity portfolio project</div>
+          <h1 style="margin: 0.1rem 0 0; color: #f8fafc; font-size: 2.55rem; line-height: 1.1;">Phishing Email Detection & Awareness Dashboard</h1>
+        </div>
+      </div>
+      <div class="status-chip">Defensive Security</div>
+      <div class="status-chip">SOC Analysis</div>
+      <div class="status-chip">Threat Awareness</div>
+      <div style="margin-top: 1rem; color: #cbd5e1; font-size: 1.03rem; max-width: 1100px;">Defensive, explainable, and beginner-friendly phishing analysis with awareness education for security operations and portfolio work.</div>
     </div>
     """,
     unsafe_allow_html=True,
@@ -139,7 +204,8 @@ if "last_report" not in st.session_state:
 
 
 with st.sidebar:
-    st.header("Controls")
+    st.title("Controls")
+    st.caption("Prepare a safe analysis scenario")
     sample_type = st.segmented_control("Sample profile", ["Custom", "Safe example", "Phishing example"], default="Custom")
 
     if sample_type == "Safe example":
@@ -181,14 +247,14 @@ with st.sidebar:
         else:
             body = raw.strip()
 
-    st.markdown("<div class='card'>")
-    st.markdown("### Quick security reminder")
-    st.markdown("- Never click unexpected links or attachments.")
-    st.markdown("- Verify requests using official channels.")
-    st.markdown("- If it feels urgent, slow down and confirm.")
-    st.markdown("</div>", unsafe_allow_html=True)
+    with st.container(border=True):
+        st.markdown("### Security reminder")
+        st.markdown("- Never click unexpected links or attachments.")
+        st.markdown("- Verify requests using official channels.")
+        st.markdown("- If it feels urgent, slow down and confirm.")
 
 with st.form("analysis_form"):
+    st.subheader("Email analysis form")
     col1, col2 = st.columns(2)
     with col1:
         sender = st.text_input("Sender email", value=sender)
@@ -200,7 +266,7 @@ with st.form("analysis_form"):
     body = st.text_area("Email body", value=body, height=240)
     url_input = st.text_input("URLs (comma or space separated)", value=url_input)
 
-    submitted = st.form_submit_button("Analyze Email", use_container_width=True)
+    submitted = st.form_submit_button("Analyze Email")
 
 if submitted:
     report = generate_analysis(sender, subject, body, display_name, url_input, attachment_name)
@@ -221,17 +287,26 @@ if report:
     with overview_col3:
         st.metric("Main issue", "Urgency" if score >= 50 else "Low signals")
 
-    st.markdown("<div class='card'>", unsafe_allow_html=True)
-    st.progress(score / 100)
-    if score >= 75:
-        st.error(f"Classification: {classification}")
-    elif score >= 50:
-        st.warning(f"Classification: {classification}")
-    elif score >= 25:
-        st.info(f"Classification: {classification}")
-    else:
-        st.success(f"Classification: {classification}")
-    st.markdown("</div>", unsafe_allow_html=True)
+    analyst_cols = st.columns(4)
+    with analyst_cols[0]:
+        st.markdown("<div class='card'><div style='font-size: 0.74rem; color: #7dd3fc; text-transform: uppercase; letter-spacing: 0.08em;'>Sender</div><div style='font-size: 1.8rem; font-weight: 700; margin-top: 0.4rem;'>%s</div></div>" % report["sender_details"]["sender_risk_score"], unsafe_allow_html=True)
+    with analyst_cols[1]:
+        st.markdown("<div class='card'><div style='font-size: 0.74rem; color: #7dd3fc; text-transform: uppercase; letter-spacing: 0.08em;'>Content</div><div style='font-size: 1.8rem; font-weight: 700; margin-top: 0.4rem;'>%s</div></div>" % report["content_details"]["content_risk_score"], unsafe_allow_html=True)
+    with analyst_cols[2]:
+        st.markdown("<div class='card'><div style='font-size: 0.74rem; color: #7dd3fc; text-transform: uppercase; letter-spacing: 0.08em;'>URL</div><div style='font-size: 1.8rem; font-weight: 700; margin-top: 0.4rem;'>%s</div></div>" % report["url_details"]["url_risk_score"], unsafe_allow_html=True)
+    with analyst_cols[3]:
+        st.markdown("<div class='card'><div style='font-size: 0.74rem; color: #7dd3fc; text-transform: uppercase; letter-spacing: 0.08em;'>Attachment</div><div style='font-size: 1.8rem; font-weight: 700; margin-top: 0.4rem;'>%s</div></div>" % report["attachment_details"]["attachment_risk_score"], unsafe_allow_html=True)
+
+    with st.container(border=True):
+        st.progress(score / 100)
+        if score >= 75:
+            st.error(f"Classification: {classification}")
+        elif score >= 50:
+            st.warning(f"Classification: {classification}")
+        elif score >= 25:
+            st.info(f"Classification: {classification}")
+        else:
+            st.success(f"Classification: {classification}")
 
     tab1, tab2, tab3, tab4 = st.tabs(["Executive overview", "Threat indicators", "Education", "Export & history"])
 
@@ -246,7 +321,7 @@ if report:
 
         st.subheader("Feature snapshot")
         feature_df = pd.DataFrame(report["features"].items(), columns=["Feature", "Value"])
-        st.dataframe(feature_df, use_container_width=True, hide_index=True)
+        st.dataframe(feature_df, hide_index=True)
 
     with tab2:
         metrics = {
@@ -256,7 +331,7 @@ if report:
             "Attachment": report["attachment_details"]["attachment_risk_score"],
         }
         chart_df = pd.DataFrame({"Risk component": list(metrics.keys()), "Score": list(metrics.values())}).set_index("Risk component")
-        st.bar_chart(chart_df)
+        st.bar_chart(chart_df, color="#7dd3fc")
 
         st.subheader("Detailed indicator breakdown")
         sender_df = pd.DataFrame({"Findings": report["sender_details"]["sender_findings"]})
@@ -265,13 +340,13 @@ if report:
         attachment_df = pd.DataFrame({"Findings": report["attachment_details"]["attachment_findings"]})
 
         st.caption("Sender findings")
-        st.dataframe(sender_df, use_container_width=True, hide_index=True)
+        st.dataframe(sender_df, hide_index=True)
         st.caption("Content findings")
-        st.dataframe(content_df, use_container_width=True, hide_index=True)
+        st.dataframe(content_df, hide_index=True)
         st.caption("URL findings")
-        st.dataframe(url_df, use_container_width=True, hide_index=True)
+        st.dataframe(url_df, hide_index=True)
         st.caption("Attachment findings")
-        st.dataframe(attachment_df, use_container_width=True, hide_index=True)
+        st.dataframe(attachment_df, hide_index=True)
 
     with tab3:
         st.subheader("Phishing awareness guidance")
@@ -301,17 +376,18 @@ if report:
                 file_name="analysis_history.csv",
                 mime="text/csv",
             )
-            st.dataframe(history_df, use_container_width=True, hide_index=True)
+            st.dataframe(history_df, hide_index=True)
         else:
             st.info("There is no saved history yet.")
 
 else:
     st.info("Run an analysis to see phishing risk findings, explanations, and dashboard insights.")
-    st.markdown("### Portfolio-ready project highlights")
-    st.markdown(
-        "- Explainable phishing risk scoring\n"
-        "- Safe synthetic dataset and ethical design\n"
-        "- Defensive awareness education\n"
-        "- Downloadable report generation\n"
-        "- Dashboard analytics with persistent history"
-    )
+    with st.container(border=True):
+        st.markdown("### Portfolio-ready project highlights")
+        st.markdown(
+            "- Explainable phishing risk scoring\n"
+            "- Safe synthetic dataset and ethical design\n"
+            "- Defensive awareness education\n"
+            "- Downloadable report generation\n"
+            "- Dashboard analytics with persistent history"
+        )

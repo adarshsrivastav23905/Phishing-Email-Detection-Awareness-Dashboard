@@ -114,6 +114,24 @@ python -m src.dataset_generator
 streamlit run app.py
 ```
 
+## Deploy to Streamlit Community Cloud
+
+This project is already structured for Streamlit Community Cloud:
+
+- root-level `app.py` is the entry point
+- root-level `requirements.txt` is used for dependency installation
+- the app reads its dataset from the repo's `data/` folder at runtime
+
+Deployment steps:
+
+1. Push the project to a GitHub repository.
+2. Open [Streamlit Community Cloud](https://streamlit.io/cloud).
+3. Click `New app` and connect your repo.
+4. Set the app path to `app.py`.
+5. Choose Python 3.11 and deploy.
+
+The app should launch successfully without custom build commands because it uses the standard Streamlit app layout.
+
 ## Synthetic dataset
 
 The project includes a generated dataset with 600+ synthetic examples in `data/phishing_email_dataset.csv`.
