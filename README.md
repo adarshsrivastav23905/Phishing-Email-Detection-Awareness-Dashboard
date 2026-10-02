@@ -74,6 +74,10 @@ Use these placeholders for GitHub/LinkedIn polish:
 
 ![Executive Report Export](https://placehold.co/1400x800/0f172a/a7f3d0?text=Executive+Report+Export)
 
+## GitHub and LinkedIn-ready project summary
+
+This project is a defensive cybersecurity dashboard that analyzes phishing emails using sender, subject, body, URL, and attachment indicators. It combines explainable rule-based detection, synthetic dataset generation, history tracking, and security awareness education in a beginner-friendly Streamlit app. It is designed to showcase practical cyber skills for portfolios, internships, and entry-level cybersecurity interviews.
+
 ## Project structure
 
 ```text
@@ -193,7 +197,13 @@ pytest
 
 ## License
 
+![License: Educational Use](https://img.shields.io/badge/License-Educational%20Use-green.svg)
+
 This project is intended for learning and educational use only.
+
+## Footer / repo description
+
+Built as a defensive cybersecurity learning project to demonstrate phishing detection, social-engineering awareness, explainable risk scoring, and dashboard-driven analyst workflows in a student-friendly, portfolio-ready format.
 
 ## Summary
 
