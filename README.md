@@ -23,7 +23,7 @@ Computer Science and Engineering (CSE) Student
 Cybersecurity | Python | Streamlit | Data Analysis
 
 ---
-
+   
 ## 📌 Project Overview
 
 The **Phishing Email Detection & Awareness Dashboard** is an educational tool that demonstrates a defensive email-triage workflow. A user enters an email's sender, display name, subject, body, URLs, and attachment name, or loads one of the fictional built-in examples. The dashboard evaluates those inputs with transparent rule-based checks and explains the signals that contributed to its assessment.
