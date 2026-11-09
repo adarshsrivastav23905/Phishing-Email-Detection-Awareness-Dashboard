@@ -10,7 +10,7 @@
 ![Status](https://img.shields.io/badge/Status-Educational%20Portfolio%20Project-22C55E)
 
 </div>
-
+   
 > A defensive cybersecurity dashboard for analyzing email sender, subject, message content, URLs, and attachment names. It uses explainable rules to calculate a phishing risk score, presents recommended actions, and records analysis history.
 
 ---
